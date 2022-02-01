@@ -32,7 +32,7 @@ class Book
     /**
      * @ORM\Column(type="integer")
      */
-    private string $exemplaries;
+    private int $exemplaries;
     /**
      * @ORM\Column(type="string")
      */
@@ -208,9 +208,9 @@ class Book
     /**
      * Get the value of exemplaries
      *
-     * @return string
+     * @return int
      */
-    public function getExemplaries(): string
+    public function getExemplaries(): int
     {
         return $this->exemplaries;
     }
@@ -222,7 +222,7 @@ class Book
      *
      * @return self
      */
-    public function setExemplaries(string $exemplaries): self
+    public function setExemplaries(int $exemplaries): self
     {
         $this->exemplaries = $exemplaries;
 
