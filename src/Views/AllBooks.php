@@ -16,19 +16,13 @@
         if (!empty($books)) {
             foreach ($books as $key => $book) {
                 $title = $book->getTitle();
-               
-                echo "<h2 class='article-title'><a href='http://127.0.0.6/book/$id'>$title</a></h2>";
+                $id = $book->getId();
+                echo "<div class='container-article'><h2 class='article-title'><a href='http://127.0.0.6/book/$id'>$title</a></h2></div>";
             }
         } else echo "<p>No books available</p>"
         ?>
     </main>
     <?php include './src/Views/footer.php' ?>
 </body>
-<script>
-    function deleteBook(id) {
-        conf = confirm('Are you sure you want to delete this book ?');
-        if (conf) window.location.href = "http://127.0.0.6/delete-book/" + id;
-    }
-</script>
 
 </html>
