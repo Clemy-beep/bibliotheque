@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr">
+<?php
+if (!isset($_SESSION['username'])) {
+    header('Location:/');
+}
+?>
 
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -37,9 +42,9 @@
             <a href="http://127.0.0.6/add-book" title="Add book"><i class="fas fa-plus fa-2x"></i></a>
             <a href="http://127.0.0.6/logout" title="Se déconnecter"><i class="fas fa-sign-out-alt fa-2x"></i></a>
             <span class="pseudo-blue"></span>
-            
+
         </nav>
-        
+
         <nav id="nav-mobile">
             <div class="menu-btn" title="Menu">
                 <div class="menu-btn__burger"></div>
@@ -50,7 +55,7 @@
                     <li><a href="http://127.0.0.6/all-books"><i class="far fa-newspaper fa-2x"></i></a></li>
                     <li><a href="http://127.0.0.6/add-book" title="Ajouter un ..."><i class="fas fa-plus fa-2x"></i></a></li>
                     <li><a href="">&nbsp;</a></li>
-                    <li><a href="/logout" title="Se déconnecter"><i class="fas fa-sign-out-alt fa-2x"></i></a> &nbsp;&nbsp; <span class="pseudo-blue"><?= $_SESSION['Type'] ?></span></li>
+                    <li><a href="http://127.0.0.6/logout" title="Se déconnecter"><i class="fas fa-sign-out-alt fa-2x"></i></a> &nbsp;&nbsp; <span class="pseudo-blue"><?= $_SESSION['Type'] ?></span></li>
                 </ul>
             </div>
         </nav>
