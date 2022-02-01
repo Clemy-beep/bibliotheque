@@ -10,9 +10,6 @@ if (!isset($_SESSION['username'])) {
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, , maximum-scale=1">
-    <meta name="description" content="Mon site e-commerce de vente de chaussure">
-    <meta name="keywords" content="chaussure, e-commerce, vente, chausette">
-    <meta name="author" content="Lory LÉTICÉE">
     <link rel="stylesheet" href="/../../style/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -22,24 +19,15 @@ if (!isset($_SESSION['username'])) {
     <title>
         Bienvenue - Accueil
     </title>
-    <style>
-        #form_controller {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-content: center;
-            align-items: center;
-            flex: 1 auto;
-        }
-    </style>
 </head>
 
 <body>
     <header>
         <h1 id="title">Bibliothèque</h1>
         <nav id="nav">
+            <a href="http://127.0.0.6/home" title="Home"><i class="fa-solid fa-house fa-2x"></i></a>
             <a href="http://127.0.0.6/all-books" title="See all books"><i class="far fa-newspaper fa-2x"></i></a>
-            <a href="http://127.0.0.6/add-book" title="Add book"><i class="fas fa-plus fa-2x"></i></a>
+            <a href="http://127.0.0.6/add-book" title="Add a book"><i class="fas fa-plus fa-2x"></i></a>
             <a href="http://127.0.0.6/logout" title="Se déconnecter"><i class="fas fa-sign-out-alt fa-2x"></i></a>
             <span class="pseudo-blue"></span>
 
@@ -51,9 +39,9 @@ if (!isset($_SESSION['username'])) {
             </div>
             <div id="nav-mobile_item">
                 <ul>
+                    <li><a href="http://127.0.0.6/home" title="Home"><i class="fa-solid fa-house fa-2x"></i></a></li>
                     <li><a href="http://127.0.0.6/all-books" title="See all books"><i class="far fa-newspaper fa-2x"></i></a></li>
-                    <li><a href="http://127.0.0.6/all-books"><i class="far fa-newspaper fa-2x"></i></a></li>
-                    <li><a href="http://127.0.0.6/add-book" title="Ajouter un ..."><i class="fas fa-plus fa-2x"></i></a></li>
+                    <li><a href="http://127.0.0.6/add-book" title="Add a book"><i class="fas fa-plus fa-2x"></i></a></li>
                     <li><a href="">&nbsp;</a></li>
                     <li><a href="http://127.0.0.6/logout" title="Se déconnecter"><i class="fas fa-sign-out-alt fa-2x"></i></a> &nbsp;&nbsp; <span class="pseudo-blue"><?= $_SESSION['Type'] ?></span></li>
                 </ul>
