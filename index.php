@@ -9,6 +9,7 @@ require_once('vendor/autoload.php');
 use Router\Router;
 $router = new Router($_GET['url']);
 
+$router->get('/logout', "App\Controller\AppController@logout");
 $router->get('/delete-rate/:id', "App\Controller\RateController@delete");
 $router->get('/edit-rate/:id', "App\Controller\RateController@modify");
 $router->post('/edit-rate/:id', "App\Controller\RateController@modify");
