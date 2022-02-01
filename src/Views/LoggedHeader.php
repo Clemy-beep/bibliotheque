@@ -33,9 +33,9 @@
     <header>
         <h1 id="title">Bibliothèque</h1>
         <nav id="nav">
-            <a href="/" title="Voir les ..."><i class="far fa-newspaper fa-2x"></i></a>
-            <a href="/" title="Ajouter un ..."><i class="fas fa-plus fa-2x"></i></a>
-            <a href="/logout" title="Se déconnecter"><i class="fas fa-sign-out-alt fa-2x"></i></a>
+            <a href="http://127.0.0.6/all-books" title="See all books"><i class="far fa-newspaper fa-2x"></i></a>
+            <a href="http://127.0.0.6/add-book" title="Add book"><i class="fas fa-plus fa-2x"></i></a>
+            <a href="http://127.0.0.6/logout" title="Se déconnecter"><i class="fas fa-sign-out-alt fa-2x"></i></a>
             <span class="pseudo-blue"></span>
             
         </nav>
@@ -46,9 +46,9 @@
             </div>
             <div id="nav-mobile_item">
                 <ul>
-                    <li><a href="/" title="Voir les ..."><i class="far fa-newspaper fa-2x"></i></a></li>
-                    <li><a href="/"><i class="far fa-newspaper fa-2x"></i></a></li>
-                    <li><a href="/" title="Ajouter un ..."><i class="fas fa-plus fa-2x"></i></a></li>
+                    <li><a href="http://127.0.0.6/all-books" title="See all books"><i class="far fa-newspaper fa-2x"></i></a></li>
+                    <li><a href="http://127.0.0.6/all-books"><i class="far fa-newspaper fa-2x"></i></a></li>
+                    <li><a href="http://127.0.0.6/add-book" title="Ajouter un ..."><i class="fas fa-plus fa-2x"></i></a></li>
                     <li><a href="">&nbsp;</a></li>
                     <li><a href="/logout" title="Se déconnecter"><i class="fas fa-sign-out-alt fa-2x"></i></a> &nbsp;&nbsp; <span class="pseudo-blue"><?= $_SESSION['Type'] ?></span></li>
                 </ul>
