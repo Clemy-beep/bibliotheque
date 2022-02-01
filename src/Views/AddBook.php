@@ -20,6 +20,8 @@
             <input type="text" name="author" id="author">
             <label for="editor">Editor</label>
             <input type="text" name="editor" id="editor">
+            <label for="exemplaries">Exemplaries</label>
+            <input type="number" name="exemplaries" id="exemplaries" required>
             <label for="resume">Resume</label>
             <textarea name="resume" id="resume"></textarea>
             <input type="submit" value="Create book">

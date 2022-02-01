@@ -30,6 +30,10 @@ class Book
      */
     private string $resume;
     /**
+     * @ORM\Column(type="integer")
+     */
+    private string $exemplaries;
+    /**
      * @ORM\Column(type="string")
      */
     private string $author;
@@ -42,11 +46,12 @@ class Book
      */
     private Collection $rates;
 
-    public function __construct(int $i, string $t, string $r, string $a, string $e)
+    public function __construct(int $i, string $t, string $r, int $ex, string $a, string $e)
     {
         $this->isbn = $i;
         $this->title = $t;
         $this->resume = $r;
+        $this->exemplaries = $ex;
         $this->author = $a;
         $this->editor = $e;
     }
@@ -196,6 +201,30 @@ class Book
     public function setRates($rates): self
     {
         $this->rates = $rates;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of exemplaries
+     *
+     * @return string
+     */
+    public function getExemplaries(): string
+    {
+        return $this->exemplaries;
+    }
+
+    /**
+     * Set the value of exemplaries
+     *
+     * @param string $exemplaries
+     *
+     * @return self
+     */
+    public function setExemplaries(string $exemplaries): self
+    {
+        $this->exemplaries = $exemplaries;
 
         return $this;
     }

@@ -16,10 +16,12 @@
         $abstract = $book->getResume();
         $author = $book->getAuthor();
         $editor = $book->getEditor();
+        $exemplaries = $book->getExemplaries() ?? 0;
         $rates = $book->getRates();
         $id = $book->getId();
         echo "<h2 class='article-title'>$title</h2>";
         echo "<p class='article-content'>$abstract</p>";
+        echo "<p>$exemplaries exemplaries</p>";
         echo "<p>Wrote by <span class='article__author'>$author</span>, published by $editor</p>";
         echo "<a href='http://127.0.0.6/edit-book/$id'>Edit Book </a>";
         echo "<button onclick='deleteBook($id)'>Delete book</button>";

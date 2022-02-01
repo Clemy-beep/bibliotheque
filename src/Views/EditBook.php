@@ -14,6 +14,7 @@
     $resume = $book->getResume();
     $author = $book->getAuthor();
     $editor = $book->getEditor();
+    $exemplaries = $book->getExemplaries();
     ?>
     <main>
         <h1>Edit Book</h1>
@@ -22,6 +23,8 @@
             <input type="text" name="title" id="title" value="<?= $title ?>">
             <label for="author">Author</label>
             <input type="text" name="author" id="author" value="<?= $author ?>">
+            <label for="exemplaries">Exemplaries</label>
+            <input type="number" name="exemplary" id="exemplary" value="<?= $exemplaries ?? 0 ?>">
             <label for="editor">Editor</label>
             <input type="text" name="editor" id="editor" value="<?= $editor ?>">
             <label for="resume">Abstract</label>

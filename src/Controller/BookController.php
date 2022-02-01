@@ -32,7 +32,7 @@ class BookController
         if (!empty($_POST)) {
             $_POST = array_map('trim', array_map('strip_tags', $_POST));
             $em = EntityManagerHelper::getEntityManager();
-            $book = new Book($_POST['isbn'], $_POST['title'], $_POST['resume'], $_POST['author'], $_POST['editor']);
+            $book = new Book($_POST['isbn'], $_POST['title'], $_POST['resume'], $_POST['exemplaries'], $_POST['author'], $_POST['editor']);
             $em->persist($book);
             try {
                 $em->flush();
@@ -55,6 +55,7 @@ class BookController
             $book->setResume($_POST['resume']);
             $book->setAuthor($_POST['author']);
             $book->setEditor($_POST['editor']);
+            $book->setExemplaries($_POST['exemplaries']);
             try {
                 $em->flush();
                 echo "Book modified";
