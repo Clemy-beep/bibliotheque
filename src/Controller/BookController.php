@@ -15,7 +15,16 @@ class BookController
         $em = EntityManagerHelper::getEntityManager();
         $booksRepository = new AbstractRepository($em, new ClassMetadata("App\Entity\Book"));
         $books = $booksRepository->findAll();
+        $ratesRepository = new AbstractRepository($em, new ClassMetadata("App\Entity\Rate"));
+        //$rates = $ratesRepository->findAll();
         include './src/Views/AllBooks.php';
+    }
+
+    public function showArticle($id){
+        $em = EntityManagerHelper::getEntityManager();
+        $booksRepository = new AbstractRepository($em, new ClassMetadata("App\Entity\Book"));
+        $book = $booksRepository->find($id);
+        include './src/Views/Book.php';
     }
 
     public function add()

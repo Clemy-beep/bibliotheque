@@ -29,7 +29,7 @@ class Rate
      */
     private string $comment;
     /**
-     * @ORM\OneToOne(targetEntity="User")
+     * @ORM\ManyToOne(targetEntity="User")
      * @ORM\JoinColumn(name="author_id", referencedColumnName="id", nullable=false)
      */
     private User $author;
